@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import Home from './pages/home';
+import Login from './pages/login';
+import Chart from './pages/chart';
+import NestedList from './conponents/navList';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div style={{ display: 'flex' }}>
+        {/* <nav style={{ width: '20%', background: '#333', height: '100vh', color: 'white', padding: '20px' }}>
+          <NestedList>
+
+          </NestedList>
+        </nav> */}
+        <NestedList></NestedList>
+        <div style={{ width: '80%', padding: '20px' }}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/chart" element={<Chart />} />
+          </Routes>
+        </div>
+      </div>
+    </Router>
   );
 }
 
