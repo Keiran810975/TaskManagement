@@ -40,20 +40,20 @@ export default function LoginForm() {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        '& .MuiTextField-root': { m: 1, width: '25ch' },
-        p: 3,
-        backgroundColor: '#f5f5f5',
-        borderRadius: 2,
-        boxShadow: '0 3px 6px rgba(0,0,0,0.1)',
-        maxWidth: 400,
+        '& .MuiTextField-root': { m: 1, width: '30ch' },
+        p: 5,
+        backgroundColor: 'white', // 修改背景颜色为白色
+        border: '2px solid #ccc', // 添加边框
+        borderRadius: 4,
+        maxWidth: 500,
         margin: '0 auto',
-        mt: 5,
+        mt: 8,
       }}
       noValidate
       autoComplete="off"
     >
       <div>
-        <h2>登录界面</h2>
+        <h2 style={{ fontSize: '2.2rem' }}>登录界面</h2>
       </div>
       <div>
         <TextField
@@ -62,6 +62,7 @@ export default function LoginForm() {
           variant="outlined"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
+          sx={{ input: { fontSize: '1.2rem' } }}
         />
       </div>
       <div>
@@ -72,19 +73,37 @@ export default function LoginForm() {
           variant="outlined"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
+          sx={{ input: { fontSize: '1.2rem' } }}
         />
       </div>
-      <Box sx={{ display: 'flex', justifyContent: 'space-between', width: '25ch', mt: 2 }}>
+      <Box sx={{ display: 'flex', justifyContent: 'space-between', width: '30ch', mt: 3 }}>
         <Button
           variant="contained"
-          color="primary"
+          sx={{
+            backgroundColor: '#F4D03F',
+            backgroundImage: 'linear-gradient(280deg, #F4D03F 0%, #16A085 100%)',
+            fontSize: '1rem',
+            '&:hover': {
+              backgroundColor: '#F4D03F',
+              backgroundImage: 'linear-gradient(280deg, #16A085 0%, #F4D03F 100%)',
+            },
+          }}
           onClick={handleLogin}
         >
           登录
         </Button>
         <Button
           variant="outlined"
-          color="secondary"
+          sx={{
+            color: 'white',
+            backgroundColor: '#0093E9',
+            backgroundImage: 'linear-gradient(160deg, #0093E9 0%, #80D0C7 100%)',
+            fontSize: '1rem',
+            '&:hover': {
+              backgroundColor: '#0093E9',
+              backgroundImage: 'linear-gradient(160deg, #80D0C7 0%, #0093E9 100%)',
+            },
+          }}
           onClick={handleRegister}
         >
           注册
@@ -93,4 +112,3 @@ export default function LoginForm() {
     </Box>
   );
 }
-  

@@ -259,22 +259,22 @@ function TaskManager() {
         <ul style={{ listStyle: 'none', padding: 0 }}>
   {selectedDate && tasksByDate[selectedDate.format('YYYY-MM-DD')] && tasksByDate[selectedDate.format('YYYY-MM-DD')].map((task, index) => (
     <li
-      key={index}
-      onDoubleClick={() => handleDoubleClick(selectedDate.format('YYYY-MM-DD'), index)}
-      style={{
-        display: 'flex',
-        alignItems: 'center',
-        padding: '10px',
-        borderBottom: '1px solid #eee',
-        marginBottom: '10px',
-        borderRadius: '4px',
-        backgroundColor: '#85FFBD', // Fallback color
-        backgroundImage: 'linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%)', // Gradient background
-        width: `${taskWidthsByDate[selectedDate.format('YYYY-MM-DD')][index]}px`,
-        position: 'relative',
-        textDecoration: completedTasksByDate[selectedDate.format('YYYY-MM-DD')][index] ? 'line-through' : 'none'
-      }}
-    >
+    key={index}
+    onDoubleClick={() => handleDoubleClick(selectedDate.format('YYYY-MM-DD'), index)}
+    style={{
+      display: 'flex',
+      alignItems: 'center',
+      padding: '10px',
+      borderBottom: '1px solid #eee',
+      marginBottom: '10px',
+      borderRadius: '4px',
+      backgroundColor: completedTasksByDate[selectedDate.format('YYYY-MM-DD')][index] ? '#74EBD5' : '#85FFBD',
+      backgroundImage: completedTasksByDate[selectedDate.format('YYYY-MM-DD')][index] ? 'linear-gradient(270deg, #74EBD5 0%, #9FACE6 100%)' : 'linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%)',
+      width: `${taskWidthsByDate[selectedDate.format('YYYY-MM-DD')][index]}px`,
+      position: 'relative',
+      textDecoration: completedTasksByDate[selectedDate.format('YYYY-MM-DD')][index] ? 'line-through' : 'none'
+    }}
+  >
       <span style={{ flex: 1 }}>{task}</span>
       <button onClick={() => handleCompleteTask(selectedDate.format('YYYY-MM-DD'), index)} style={{
         backgroundColor: 'transparent',

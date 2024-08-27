@@ -89,7 +89,7 @@ export default function PrimarySearchAppBar() {
               aria-label="open drawer"
               sx={{ mr: 2 }}
             >
-              <MenuIcon />
+              {/* <MenuIcon /> */}
             </IconButton>
             <Typography
               variant="h6"
@@ -97,14 +97,14 @@ export default function PrimarySearchAppBar() {
               component="div"
               sx={{ display: { xs: 'none', sm: 'block' } }}
             >
-              SHIT
+              GRELLOW
             </Typography>
             <Search>
               <SearchIconWrapper>
                 <SearchIcon />
               </SearchIconWrapper>
               <StyledInputBase
-                placeholder="Search…"
+                placeholder="Useless…"
                 inputProps={{ 'aria-label': 'search' }}
               />
             </Search>

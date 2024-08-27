@@ -49,7 +49,7 @@ export default function Account() {
             <Avatar sx={{ bgcolor: '#3f51b5', width: 64, height: 64, mb: 2 }}>
               {username.charAt(0).toUpperCase()}
             </Avatar>
-            <Typography variant="h5" component="div">
+            <Typography variant="h5" component="div" fontSize={30} fontWeight="bold">
               欢迎回来, {username}!
             </Typography>
             <Button
@@ -65,7 +65,7 @@ export default function Account() {
           <Typography variant="h6">正在加载...</Typography>
         )
       ) : (
-        <Typography variant="h6" color="error">
+        <Typography variant="h6" color="black" fontSize={30} fontWeight="bold">
           未登录，请先登录。
         </Typography>
       )}

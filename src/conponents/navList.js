@@ -64,37 +64,7 @@ export default function NestedList() {
         </ListItemButton>
       </NavLink>
 
-      <NavLink
-        to="/login"
-        style={({ isActive }) => ({
-          textDecoration: 'none',
-          color: isActive ? 'inherit' : 'inherit',
-        })}
-        onClick={() => handleSetActiveNav('login')}
-      >
-        <ListItemButton sx={{ borderRadius: 2 }}>
-          <ListItemIcon style={iconStyle('login')}>
-            <LoginIcon />
-          </ListItemIcon>
-          <ListItemText primary="登录" />
-        </ListItemButton>
-      </NavLink>
-
-      <NavLink
-        to="/team"
-        style={({ isActive }) => ({
-          textDecoration: 'none',
-          color: isActive ? 'inherit' : 'inherit',
-        })}
-        onClick={() => handleSetActiveNav('team')}
-      >
-        <ListItemButton sx={{ borderRadius: 2 }}>
-          <ListItemIcon style={iconStyle('team')}>
-            <GroupIcon />
-          </ListItemIcon>
-          <ListItemText primary="团队" />
-        </ListItemButton>
-      </NavLink>
+      
 
       <NavLink
         to="/chart"
@@ -125,6 +95,38 @@ export default function NestedList() {
             <DriveFileMoveIcon />
           </ListItemIcon>
           <ListItemText primary="导出" />
+        </ListItemButton>
+      </NavLink>
+
+      <NavLink
+        to="/login"
+        style={({ isActive }) => ({
+          textDecoration: 'none',
+          color: isActive ? 'inherit' : 'inherit',
+        })}
+        onClick={() => handleSetActiveNav('login')}
+      >
+        <ListItemButton sx={{ borderRadius: 2 }}>
+          <ListItemIcon style={iconStyle('login')}>
+            <LoginIcon />
+          </ListItemIcon>
+          <ListItemText primary="登录" />
+        </ListItemButton>
+      </NavLink>
+
+      <NavLink
+        to="/team"
+        style={({ isActive }) => ({
+          textDecoration: 'none',
+          color: isActive ? 'inherit' : 'inherit',
+        })}
+        onClick={() => handleSetActiveNav('team')}
+      >
+        <ListItemButton sx={{ borderRadius: 2 }}>
+          <ListItemIcon style={iconStyle('team')}>
+            <GroupIcon />
+          </ListItemIcon>
+          <ListItemText primary="团队" />
         </ListItemButton>
       </NavLink>
 
