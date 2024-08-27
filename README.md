@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+# Grellow 
+---
+一个简洁、美观、高效的任务管理工具 
+基于`react`+`Django`
+(目前后端仍在开发中)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+### 功能介绍
 
-In the project directory, you can run:
+- 任务列表
+    你可以在主页面添加你的任务，支持选择日期、标记完成、删除任务
+    任务元素框可以自由拖动改变长度，你可以使用这个功能来记录：
+    - `任务预计需要消耗的时间`
+    - `任务的完成进度`
+    - `任务的重要程度`
+![加载失败](https://github.com/Keiran810975/taskim/blob/main/1.png?raw=true)
+- 统计
+    你创建任务之后，会自动生成两个统计图，实时记录你的任务完成情况
+    扇形统计图：直观显示已完成任务和未完成任务的比例以及数量
+    柱状统计图：显示你近十天中每天的任务总数，以及每天的任务完成情况
+![加载失败](https://github.com/Keiran810975/taskim/blob/main/2.png?raw=true)
+- 导出
+    你可以将你的任务导出为markdown、txt、或者word文件
+![加载失败](https://github.com/Keiran810975/taskim/blob/main/3.png?raw=true)
+- 注册/登录(开发中)
+    你可以注册账号，登录后可以保存你的任务，下次登录时可以继续使用
+    登录后，你的任务会自动同步到云端，即使你更换设备，也可以继续使用
+- 团队(开发中)
+    你可以创建团队，邀请你的朋友加入，一起管理任务
+    在团队中，你可以查看其他成员的任务，也可以查看他们的统计图
+- 登录(开发中)
+    你可以注册账号，登录后可以保存你的任务，下次登录时可以继续使用
+    登录后，你的任务会自动同步到云端，即使你更换设备，也可以继续使用
+- 团队(开发中)
+    你可以创建团队，邀请你的朋友加入，一起管理任务
+    在团队中，你可以查看其他成员的任务，也可以查看他们的统计图
+    你们可以共享一个任务管理界面，共同创建任务
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 使用 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+你可以通过以下命令部署到本地：
 
-### `npm test`
+```
+$ git clone https://github.com/Keiran810975/TaskManagement.git
+```
+安装依赖：
+```
+$ npm install
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+启动项目：
 
-### `npm run build`
+```
+$ npm start
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
